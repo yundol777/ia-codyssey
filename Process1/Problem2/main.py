@@ -27,10 +27,12 @@ try:
         lines_dict.append(dict(zip(format_key, lines_list)))
     
     #5 mission_computer_main.json 파일로 저장하는데 JSON으로 저장
-    import json
+    lines_json = str(lines_dict).replace("'", '"').replace('\\n', '').replace('rocket"s',"rocket's")  
+    print("lines_json 형식")
+    print(lines_json)
 
     with open('./mission_computer_main.json', 'w', encoding='utf-8') as f:
-        json.dump(lines_dict, f, indent=4)
+        f.write(lines_json)
 
 except Exception as e:
     error_message = str(e)
