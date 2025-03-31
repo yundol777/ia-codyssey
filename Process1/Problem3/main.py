@@ -24,18 +24,17 @@ try:
     for line in lines_lists:
         print(line)
 
-    # #4 인화성 지수 0.7 이상되는 목록 뽑아서 출력
+    #4 인화성 지수 0.7 이상되는 목록 뽑아서 출력
     print("4. 인화성 지수 0.7 이상 되는 목록 뽑아서 출력")
     lines_over_07 = []
     lines_over_07 = [item for item in lines_lists if float(item[-1]) >= 0.7]
     for line in lines_over_07:
         print(line)
         
-    #50.7 이상되는 목록 Mars_Base_Inventory_danger.csv로 저장장
-
+    #5 0.7 이상되는 목록 Mars_Base_Inventory_danger.csv로 저장
     with open('./Mars_Base_Inventory_danger.csv', 'w', encoding='utf-8') as f:
         for item in lines_over_07:
-            line = ','.join(item).strip()  # 리스트를 문자열로 변환 + 개행 제거
+            line = ','.join(item).strip()
             f.write(line + '\n')
 
 except Exception as e:
