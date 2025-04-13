@@ -28,8 +28,6 @@ try:
     
     #5 mission_computer_main.json 파일로 저장하는데 JSON으로 저장
     lines_json = str(lines_dict).replace("'", '"').replace('\\n', '').replace('rocket"s',"rocket's")  
-    print("lines_json 형식")
-    print(lines_json)
 
     with open('./mission_computer_main.json', 'w', encoding='utf-8') as f:
         f.write(lines_json)
