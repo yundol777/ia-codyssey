@@ -30,6 +30,7 @@ try:
         fmt='%s,%.3f',             
         delimiter=',',             
         header='parts,avg_strength',
+        comments=''
     )
 
     #보너스1 방금 만든 csv 읽어와 parts2에 저장 (ndarray)
@@ -41,7 +42,7 @@ try:
         encoding='utf-8'
     )
     
-    #보너스2 parts2의 전치 행렬 구하고, parts3에 저장장
+    #보너스2 parts2의 전치 행렬 구하고, parts3에 저장
     names = parts2['parts']
     strengths = parts2['avg_strength']
 
