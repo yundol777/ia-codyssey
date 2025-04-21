@@ -15,12 +15,12 @@ class DummySensor:
 
     # 3. 랜덤으로 값 설정
     def set_env(self):
-        self.env_values["mars_base_internal_temperature"] = round(random.uniform(18, 30), 2)     # 3
-        self.env_values["mars_base_external_temperature"] = round(random.uniform(0, 21), 2)      # 4
-        self.env_values["mars_base_internal_humidity"] = round(random.uniform(50, 60), 2)        # 5
-        self.env_values["mars_base_external_illuminance"] = round(random.uniform(500, 715), 2)   # 6
-        self.env_values["mars_base_internal_co2"] = round(random.uniform(0.02, 0.1), 4)           # 7
-        self.env_values["mars_base_internal_oxygen"] = round(random.uniform(4, 7), 2)             # 8
+        self.env_values["mars_base_internal_temperature"] = round(random.uniform(18, 30), 2)
+        self.env_values["mars_base_external_temperature"] = round(random.uniform(0, 21), 2)
+        self.env_values["mars_base_internal_humidity"] = round(random.uniform(50, 60), 2)
+        self.env_values["mars_base_external_illuminance"] = round(random.uniform(500, 715), 2)
+        self.env_values["mars_base_internal_co2"] = round(random.uniform(0.02, 0.1), 4)
+        self.env_values["mars_base_internal_oxygen"] = round(random.uniform(4, 7), 2)
 
     # 4. get_env() 메소드 (현재 env_values 반환)
     def get_env(self):
